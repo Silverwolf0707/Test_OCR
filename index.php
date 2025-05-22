@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             try {
     
                 $fileRead = (new TesseractOCR('uploads/' . $file_name))
-                    ->executable('C:\Program Files\Tesseract-OCR\tesseract.exe')
+                    ->executable('/usr/bin/tesseract')
                     ->setLanguage('eng')
                     ->run();
     
